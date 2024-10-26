@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        function add() {
+            let a = document.getElementById("firstnumber").value;
+            let b = document.getElementById("secondnumber").value;
+            let c = Number(a) + Number(b);
+            document.getElementById("result").innerHTML = `Result : ${c}`;
+        }
+        function subtract() {
+            let a = document.getElementById("firstnumber").value;
+            let b = document.getElementById("secondnumber").value;
+            let c = Number(a) - Number(b);
+            document.getElementById("result").innerHTML = `Result : ${c}`;
+        }
+        function multiply() {
+            let a = document.getElementById("firstnumber").value;
+            let b = document.getElementById("secondnumber").value;
+            let c = Number(a) * Number(b);
+            document.getElementById("result").innerHTML = `Result : ${c}`;
+        } function divide() {
+            let a = document.getElementById("firstnumber").value;
+            let b = document.getElementById("secondnumber").value;
+            let c = Number(a) / Number(b);
+            document.getElementById("result").innerHTML = `Result : ${c}`;
+        }
+    </script>
+    <style>
+        input,button{
+            border-radius: 20px;
+            margin-top:20px
+        }
+        div{
+            margin-top:200px;
+        }
+        body{
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <center>
+        <div style="background-color:rgb(6, 252, 239);display:inline-block;padding:20px;border:2px solid blue;box-shadow: 20px 10px;">
+            <h1>Calculator</h1>
+            <input type="number" id="firstnumber">
+            <input type="number" id="secondnumber">
+            <button type="button" onclick="add()">Add</button>
+            <button type="button" onclick="subtract()">Subtract</button>
+            <button type="button" onclick="multiply()">Multiply</button>
+            <button type="button" onclick="divide()">Divide</button>
+            <p id="result">Keep your eyes here</p>
+        </div>
+    </center>
+    <p>refresh the page to start fresh</p>
+    </form>
+
+</body>
+
+</html>
